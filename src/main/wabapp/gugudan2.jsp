@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.org.cy_CRUD.Rq"%>
 
 <%
-Rq rq = new Rq(request, response);
-
-int dan = rq.getIntParam("dan", 9);
-int limit = rq.getIntParam("limit", 9);
+// int 로 바꿔주는 이유 범용 저장소 (request) 는 오브젝트로 저장함
+int dan = (int) request.getAttribute("dan");
+int limit = (int) request.getAttribute("limit");
 %>
 
 <h1><%=dan%>단</h1>
@@ -14,6 +12,7 @@ int limit = rq.getIntParam("limit", 9);
 <% } %>
 
 
+<!-- // test 빨간 사각형
 <div class="a"></div>
 <style>
 .a {
@@ -22,3 +21,4 @@ int limit = rq.getIntParam("limit", 9);
     background-color: red;
     }
 </style>
+-->
