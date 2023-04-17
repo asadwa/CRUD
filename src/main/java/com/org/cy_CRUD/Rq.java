@@ -1,4 +1,4 @@
-package org.example;
+package com.org.cy_CRUD;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -21,7 +21,6 @@ public class Rq {
     }
     resp.setCharacterEncoding("UTF-8"); // 완성되는 HTML의 인코딩을 UTF-8로 하겠다.
     resp.setContentType("text/html; charset-utf-8"); //우리가 만든 결과물이 UTF-8이라고 알리는 의미.
-
   }
 
   public int getIntParam (String paraName, int defaultValue){
@@ -43,7 +42,5 @@ public class Rq {
       throw new RuntimeException(e);
     }
   }
-
-
 
 }
